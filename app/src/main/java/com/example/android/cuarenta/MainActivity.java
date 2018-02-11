@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
     int scoreChullas = 0;
     int scoreViejos = 0;
+    boolean twoToChullasCaida = false;
+    boolean twoToViejosCaida = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +58,12 @@ public class MainActivity extends AppCompatActivity {
      *     38 points won't allow anything but to use method twoToChullasCaida
       */
 
-    public void onlyWayToFortyC(boolean twoToChullasCaida) {
+    // This is an onClick method meaning you can't pass it a variable, it needs to be of (View view)
+    // This is currently causing the application to crash.
+    // You use use a variable where you update elsewhere.  I will move twoToChullasCaida to the top
+
+//    public void onlyWayToFortyC(boolean twoToChullasCaida) {
+    public void onlyWayToFortyC(View view) {
         if ((scoreChullas == 38) && twoToChullasCaida == true)
         {
             scoreChullas = scoreChullas +2;
@@ -65,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 		else {
             Context context = getApplicationContext();
 
-            CharSequence text = "Only way to 40 is Caida";
+            String text = "Only way to 40 is Caida";
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);
@@ -117,7 +124,10 @@ public class MainActivity extends AppCompatActivity {
     /**
      *     38 points won't allow anything but to use method twoToViejosCaida
      */
-    public void onlyWayToFortyV(boolean twoToViejosCaida) {
+
+    // Same as previous similar method.  Not sure what intent with boolean is, and were you want to set it
+//    public void onlyWayToFortyV(boolean twoToViejosCaida) {
+      public void onlyWayToFortyV(View view) {
         if ((scoreViejos == 38) && twoToViejosCaida == true)
         {
             scoreViejos = scoreViejos +2;
@@ -126,24 +136,12 @@ public class MainActivity extends AppCompatActivity {
         else {
             Context context = getApplicationContext();
 
-            CharSequence text = "Only way to 40 is Caida";
+            String text = "Only way to 40 is Caida";
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
         }
-    }
-
-    /**
-     *  40 should force a reset
-     */
-    public void Reset (View v) {
-        if (scoreViejos == 40 || scoreChullas == 40)
-        { 	scoreChullas = 0;
-            scoreViejos =0;
-        }
-        displayViejos (scoreChullas);
-        displayViejos (scoreViejos);
     }
 
     /**
@@ -153,4 +151,23 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = findViewById(R.id.viejosScore);
         scoreView.setText(String.valueOf(scoreViejos));
     }
+
+    /**
+     *  40 should force a reset
+     */
+    // This is the only place you use this code.  As it's attached to a button the point is to reset the scores.
+    // uncomment out some of the code below if that wasn't your intent.
+    public void reset (View v) {
+//        if (scoreViejos == 40 || scoreChullas == 40) {
+         	scoreChullas = 0;
+            scoreViejos = 0;
+//        }
+
+        // You were calling the wrong method to update the Chullas score
+//        displayViejos(scoreChullas);
+        displayChullas(scoreChullas);
+        displayViejos(scoreViejos);
+    }
+
+
 }
