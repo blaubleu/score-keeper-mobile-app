@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ffffff</item>
+        <!--score buttons-->
+        <item name="colorButtonNormal">#FFD034</item>
+        <item name="colorAccent">#FF4C3B</item>
+    </style>
+
+</resources>
