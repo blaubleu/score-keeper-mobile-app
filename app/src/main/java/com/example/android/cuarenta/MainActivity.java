@@ -12,8 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     int scoreChullas = 0;
     int scoreViejos = 0;
-    boolean twoToChullasCaida = false;
-    boolean twoToViejosCaida = false;
+//    boolean onlyWayToFortyC = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,63 +20,72 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /**
-     *   Chullas section starts here
-     *   -2 to opponent for bad dealing
-     */
-    public void twoFromChullasBadDealing(View v) {
+        /**
+         *   Chullas section starts here
+         *   -2 to opponent for bad dealing
+         */
+        public void twoFromChullasBadDealing (View view){
         scoreChullas = scoreChullas - 2;
         displayChullas(scoreChullas);
     }
 
+        /**
+         *   +2 if you receive 3 cards of matching value
+         */
+
+    public void twoToChullasRonda(View view) {
+        scoreChullas = scoreChullas + 2;
+        displayChullas(scoreChullas);
+        if (scoreChullas >= 39) {
+            caidaToast();
+        }
+    }
+
     /**
-     *   +2 if you receive 3 cards of matching value
+     * +2 if you snap a card that was placed on the table by your opponent
      */
-    public void twoToChullasRonda(View v) {
+    public void twoToChullasLimpia(View view) {
         scoreChullas = scoreChullas + 2;
-        displayChullas (scoreChullas);
+        displayChullas(scoreChullas);
+        if (scoreChullas >= 39) {
+            caidaToast();
+        }
     }
 
     /**
-     *    +2 if you snap a card that was placed on the table by your opponent
+     * +2 until you reach the number of cards you earned -start counting after 20 cards-
      */
-    public void twoToChullasLimpia(View v) {
+    public void pairNumberAfterTwentyCardsInStackChullas(View view) {
         scoreChullas = scoreChullas + 2;
-        displayChullas (scoreChullas);
+        displayChullas(scoreChullas);
+        if (scoreChullas >= 39) {
+            caidaToast();
+        }
     }
 
     /**
-     *    +2 until you reach the number of cards you earned -start counting after 20 cards-
-      */
-    public void pairNumberAfterTwentyCardsInStackChullas(View v) {
-        scoreChullas = scoreChullas + 2;
-        displayChullas (scoreChullas);
-    }
-
-    /**
-     *     38 points won't allow anything but to use method twoToChullasCaida
-      */
-
-    // This is an onClick method meaning you can't pass it a variable, it needs to be of (View view)
-    // This is currently causing the application to crash.
-    // You use use a variable where you update elsewhere.  I will move twoToChullasCaida to the top
-
-//    public void onlyWayToFortyC(boolean twoToChullasCaida) {
+     * 38 points won't allow anything but to use method twoToChullasCaida
+     */
     public void onlyWayToFortyC(View view) {
-        if ((scoreChullas == 38) && twoToChullasCaida == true)
-        {
-            scoreChullas = scoreChullas +2;
-            displayChullas (scoreChullas);
-        }
-		else {
-            Context context = getApplicationContext();
+        scoreChullas = scoreChullas + 2;
+        displayChullas(scoreChullas);
+/*        if (scoreChullas == 40) {
+            reset();
+        }*/
+    }
 
-            String text = "Only way to 40 is Caida";
-            int duration = Toast.LENGTH_SHORT;
+    /**
+     *  Toast method
+     */
+    public void caidaToast() {
 
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-        }
+        Context context = getApplicationContext();
+
+        String text = "Only way to 40 is Caida";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 
     /**
@@ -87,6 +95,16 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = findViewById(R.id.chullasScore);
         scoreView.setText(String.valueOf(scoreChullas));
     }
+
+    /**
+     * Reset method -- totally starting here, does not work :(
+     */
+/*    public void reset() {
+        if ((scoreChullas == 40) && onlyWayToFortyC == true){
+            scoreChullas = 0;
+            displayChullas(scoreChullas);
+        }
+    }*/
 
     /**
      *    Viejos section starts here
@@ -103,6 +121,9 @@ public class MainActivity extends AppCompatActivity {
     public void twoToViejosRonda (View v) {
         scoreViejos = scoreViejos + 2;
         displayViejos (scoreViejos);
+        if (scoreViejos >= 39) {
+            caidaToast();
+        }
     }
 
     /**
@@ -111,6 +132,9 @@ public class MainActivity extends AppCompatActivity {
     public void twoToViejosLimpia (View v) {
         scoreViejos = scoreViejos + 2;
         displayViejos (scoreViejos);
+        if (scoreViejos >= 39) {
+            caidaToast();
+        }
     }
 
     /**
@@ -119,30 +143,20 @@ public class MainActivity extends AppCompatActivity {
     public void pairNumberAfterTwentyCardsInStackViejos (View v) {
         scoreViejos = scoreViejos + 2;
         displayViejos (scoreViejos);
+        if (scoreViejos >= 39) {
+            caidaToast();
+        }
     }
 
     /**
      *     38 points won't allow anything but to use method twoToViejosCaida
+     *     NOTE: pending update once Chullas method passes test
+     *
      */
-
-    // Same as previous similar method.  Not sure what intent with boolean is, and were you want to set it
-//    public void onlyWayToFortyV(boolean twoToViejosCaida) {
       public void onlyWayToFortyV(View view) {
-        if ((scoreViejos == 38) && twoToViejosCaida == true)
-        {
-            scoreViejos = scoreViejos +2;
-            displayViejos (scoreViejos);
-        }
-        else {
-            Context context = getApplicationContext();
-
-            String text = "Only way to 40 is Caida";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-        }
-    }
+          scoreViejos = scoreViejos + 2;
+          displayViejos (scoreViejos);
+      }
 
     /**
      * Displays the score for Team Viejos
@@ -153,21 +167,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *  40 should force a reset
+     *  Should be able to reset game at any point but alwasy reset the game one 40 is reached - not tested
      */
     // This is the only place you use this code.  As it's attached to a button the point is to reset the scores.
     // uncomment out some of the code below if that wasn't your intent.
     public void reset (View v) {
-//        if (scoreViejos == 40 || scoreChullas == 40) {
          	scoreChullas = 0;
             scoreViejos = 0;
-//        }
+             displayChullas(scoreChullas);
+             displayViejos(scoreViejos);
+        //I would like to reset the game in this section , but adding an iff statement as below these lines does not work
+        //but I did notice I need to have the option to reset prior to reaching
 
-        // You were calling the wrong method to update the Chullas score
-//        displayViejos(scoreChullas);
-        displayChullas(scoreChullas);
-        displayViejos(scoreViejos);
+ /*           if (scoreViejos == 40 || scoreChullas == 40){
+                    scoreChullas = 0;
+                    scoreViejos = 0;
+        }*/
+
     }
-
-
 }
