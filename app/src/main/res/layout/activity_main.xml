@@ -59,7 +59,11 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
+<<<<<<< HEAD
                 android:onClick="cuarentaPlusChullas"
+=======
+                android:onClick="twoPointsAddedToChullas"
+>>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="ronda" />
 
             <Button
@@ -71,7 +75,11 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
+<<<<<<< HEAD
                 android:onClick="cuarentaPlusChullas"
+=======
+                android:onClick="twoPointsAddedToChullas"
+>>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="limpia" />
 
             <Button
@@ -83,7 +91,11 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
+<<<<<<< HEAD
                 android:onClick="cuarentaPlusChullas"
+=======
+                android:onClick="twoPointsAddedToChullas"
+>>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="+2 points" />
 
             <Button
@@ -95,7 +107,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
-                android:onClick="onlyWayToFortyC"
+                android:onClick="onlyWayToFortyChullus"
                 android:text="caida" />
 
             <Button
@@ -109,7 +121,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
                 android:background="#FF4C3B"
-                android:onClick="twoFromChullasBadDealing"
+                android:onClick="twoPointsRemovedFromChullas"
                 android:text="-2 points" />
 
         </LinearLayout>
@@ -177,7 +189,11 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
+<<<<<<< HEAD
                 android:onClick="cuarentaPlusViejos"
+=======
+                android:onClick="twoPointsAddedToViejos"
+>>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="ronda" />
 
             <Button
@@ -190,7 +206,11 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
+<<<<<<< HEAD
                 android:onClick="cuarentaPlusViejos"
+=======
+                android:onClick="twoPointsAddedToViejos"
+>>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="limpia" />
 
             <Button
@@ -203,7 +223,11 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
+<<<<<<< HEAD
                 android:onClick="cuarentaPlusViejos"
+=======
+                android:onClick="twoPointsAddedToViejos"
+>>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="+2 points" />
 
             <Button
@@ -216,7 +240,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
-                android:onClick="onlyWayToFortyV"
+                android:onClick="onlyWayToFortyViejos"
                 android:text="caida" />
 
             <Button
@@ -230,7 +254,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
                 android:background="#FF4C3B"
-                android:onClick="twoFromViejosBadDealing"
+                android:onClick="twoPointsRemovedFromViejos"
                 android:text="-2 points" />
 
         </LinearLayout>
@@ -246,7 +270,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
         android:background="#C6C8CA"
-        android:onClick="reset"
+        android:onClick="resetButton"
         android:text="reset" />
 
 </RelativeLayout>
