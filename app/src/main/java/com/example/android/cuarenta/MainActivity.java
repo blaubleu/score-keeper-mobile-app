@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     int scoreChullas = 0;
     int scoreViejos = 0;
-//    boolean onlyWayToFortyV = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void winner(String winnerMessage) {
         AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
-        alertDialog.setTitle("Game Over!");
+        alertDialog.setTitle("Cuarenta!");
         alertDialog.setMessage(winnerMessage);
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Restart", new DialogInterface.OnClickListener() {
             @Override
@@ -56,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
      * Chullas section starts here
      * -2 to opponent for bad dealing
      */
-    public void twoPointsRemovedFromChullas(View view) {
+    public void minusTwoChullas(View view) {
         scoreChullas = scoreChullas - 2;
         displayChullas(scoreChullas);
     }
@@ -67,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void twoPointsAddedToChullas(View view){
         if (scoreChullas >= 38) {
-            caidaToast("Only way to 40 is Caida");
+            caidaToast("Only way to reach 40 points is Caida");
             return;
         }
         scoreChullas = scoreChullas + 2;
@@ -77,17 +76,18 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 38 points won't allow anything but to use method twoToChullasCaida
      */
-    public void onlyWayToFortyChullus(View view) {
+    public void caidaChullas(View view) {
         if (scoreChullas < 38) {
-            caidaToast("You can't use Caida till you score 38");
-            return;
+            scoreChullas = scoreChullas + 2;
+            displayChullas(scoreChullas);
         }
+        else if (scoreChullas == 38){
             scoreChullas = scoreChullas + 2;
             displayChullas(scoreChullas);
 
             //alert goes here
-            winner("Congratulations Chullus wins!");
-
+            winner("Congratulations Chullas wins!");
+        }
     }
 
     /**
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
      *    Viejos section starts here
      *    -2 to opponent for bad dealing
      */
-    public void twoPointsRemovedFromViejos(View v) {
+    public void minusTwoViejos(View v) {
         scoreViejos = scoreViejos - 2;
         displayViejos(scoreViejos);
     }
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void twoPointsAddedToViejos(View view){
         if (scoreViejos >= 38) {
-            caidaToast("Only way to 40 is Caida");
+            caidaToast("Only way to reach 40 points is Caida");
             return;
         }
         scoreViejos = scoreViejos + 2;
@@ -123,22 +123,24 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 38 points won't allow anything but to use method twoToChullasCaida
      */
-    public void onlyWayToFortyViejos(View view) {
+    public void caidaViejos(View view) {
         if (scoreViejos < 38) {
-            caidaToast("You can't use Caida till you score 38");
-            return;
+            scoreViejos = scoreViejos + 2;
+            displayViejos(scoreViejos);
         }
-        scoreChullas = scoreChullas + 2;
-        displayChullas(scoreChullas);
+        else if (scoreViejos == 38) {
+            scoreViejos = scoreViejos + 2;
+            displayViejos(scoreViejos);
 
-        //alert goes here
-        winner("Congratulations Viejos wins!");
+            //alert goes here
+            winner("Congratulations Viejos wins!");
+        }
     }
 
     /**
      * Displays the score for Team Viejos
      */
-    public void displayViejos(int scoreViejos) {
+    public void displayViejos (int scoreViejos) {
         TextView scoreView = findViewById(R.id.viejosScore);
         scoreView.setText(String.valueOf(scoreViejos));
     }
