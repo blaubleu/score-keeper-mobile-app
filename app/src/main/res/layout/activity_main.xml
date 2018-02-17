@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+Viejos image borrowed from docponds.com the best pub in Stowe VT
+Chullas image borrowed from Visarts. Stock Hipster B n W Cool Haircut
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -59,11 +63,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
-<<<<<<< HEAD
                 android:onClick="cuarentaPlusChullas"
-=======
-                android:onClick="twoPointsAddedToChullas"
->>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="ronda" />
 
             <Button
@@ -75,11 +75,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
-<<<<<<< HEAD
                 android:onClick="cuarentaPlusChullas"
-=======
-                android:onClick="twoPointsAddedToChullas"
->>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="limpia" />
 
             <Button
@@ -91,11 +87,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
-<<<<<<< HEAD
                 android:onClick="cuarentaPlusChullas"
-=======
-                android:onClick="twoPointsAddedToChullas"
->>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="+2 points" />
 
             <Button
@@ -107,7 +99,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
-                android:onClick="onlyWayToFortyChullus"
+                android:onClick="caidaChullas"
                 android:text="caida" />
 
             <Button
@@ -121,7 +113,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
                 android:background="#FF4C3B"
-                android:onClick="twoPointsRemovedFromChullas"
+                android:onClick="minusTwoChullas"
                 android:text="-2 points" />
 
         </LinearLayout>
@@ -189,11 +181,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
-<<<<<<< HEAD
                 android:onClick="cuarentaPlusViejos"
-=======
-                android:onClick="twoPointsAddedToViejos"
->>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="ronda" />
 
             <Button
@@ -206,11 +194,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
-<<<<<<< HEAD
                 android:onClick="cuarentaPlusViejos"
-=======
-                android:onClick="twoPointsAddedToViejos"
->>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="limpia" />
 
             <Button
@@ -223,11 +207,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
-<<<<<<< HEAD
                 android:onClick="cuarentaPlusViejos"
-=======
-                android:onClick="twoPointsAddedToViejos"
->>>>>>> 2ec578be6ca7b111c84e7d4bdeb73335cc418e25
                 android:text="+2 points" />
 
             <Button
@@ -240,7 +220,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
-                android:onClick="onlyWayToFortyViejos"
+                android:onClick="caidaViejos"
                 android:text="caida" />
 
             <Button
@@ -254,7 +234,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
                 android:background="#FF4C3B"
-                android:onClick="twoPointsRemovedFromViejos"
+                android:onClick="minusTwoViejos"
                 android:text="-2 points" />
 
         </LinearLayout>
