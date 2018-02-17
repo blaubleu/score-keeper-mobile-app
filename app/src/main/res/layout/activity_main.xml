@@ -208,7 +208,7 @@ Chullas image borrowed from Visarts. Stock Hipster B n W Cool Haircut
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
                 android:onClick="cuarentaPlusViejos"
-                android:text="+2 points" />
+                android:text="+2" />
 
             <Button
                 android:id="@+id/caidaV"
@@ -235,7 +235,7 @@ Chullas image borrowed from Visarts. Stock Hipster B n W Cool Haircut
                 android:layout_marginTop="8dp"
                 android:background="#FF4C3B"
                 android:onClick="minusTwoViejos"
-                android:text="-2 points" />
+                android:text="-2" />
 
         </LinearLayout>
 

@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void cuarentaPlusChullas(View view){
         if (scoreChullas >= 38) {
-            caidaToast("Only way to reach 40pts is Caida");
+            caidaToast("Only way to reach 40 points is Caida");
             return;
         }
         scoreChullas = scoreChullas + 2;
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void cuarentaPlusViejos(View view){
         if (scoreViejos >= 38) {
-            caidaToast("Only way to reach 40pts is Caida");
+            caidaToast("Only way to reach 40 points is Caida");
             return;
         }
         scoreViejos = scoreViejos + 2;
