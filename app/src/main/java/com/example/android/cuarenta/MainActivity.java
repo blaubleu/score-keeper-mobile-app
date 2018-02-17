@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             scoreViejos = scoreViejos + 2;
             displayViejos(scoreViejos);
         }
-        else if (scoreViejos == 38){
+        else if (scoreViejos == 38) {
             scoreViejos = scoreViejos + 2;
             displayViejos(scoreViejos);
 
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the score for Team Viejos
      */
-    public void displayViejos(int scoreViejos) {
+    public void displayViejos (int scoreViejos) {
         TextView scoreView = findViewById(R.id.viejosScore);
         scoreView.setText(String.valueOf(scoreViejos));
     }
