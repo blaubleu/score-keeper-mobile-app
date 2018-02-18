@@ -3,7 +3,15 @@
 Viejos image borrowed from docponds.com the best pub in Stowe VT
 Chullas image borrowed from Visarts. Stock Hipster B n W Cool Haircut
 -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -22,99 +30,52 @@ Chullas image borrowed from Visarts. Stock Hipster B n W Cool Haircut
 
             <ImageView
                 android:id="@+id/chulla"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:padding="4dp"
-                android:paddingTop="16dp"
-                android:scaleType="centerCrop"
+                style="@style/teamLogos"
                 android:src="@drawable/chulla" />
 
             <TextView
                 android:id="@+id/chullas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:paddingBottom="8dp"
-                android:paddingTop="8dp"
-                android:text="Chullas"
-                android:textColor="#FB131313"
-                android:textSize="12sp" />
+                style="@style/teamNames"
+                android:text="@string/teamOne"
+                android:textColor="@color/charcoal"
+                android:textSize="@dimen/font_size" />
 
             <TextView
                 android:id="@+id/chullasScore"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_horizontal"
+                style="@style/scoreStyle"
                 android:onClick="chullasScore"
-                android:padding="8dp"
-                android:paddingBottom="12dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="32sp" />
+                android:text="0"  />
 
             <Button
                 android:id="@+id/rondaC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"
+                style="@style/scoreButton"
                 android:onClick="cuarentaPlusChullas"
                 android:text="ronda" />
 
             <Button
                 android:id="@+id/limpiaC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"
+                style="@style/scoreButton"
                 android:onClick="cuarentaPlusChullas"
                 android:text="limpia" />
 
             <Button
                 android:id="@+id/dosC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"
+                style="@style/scoreButton"
                 android:onClick="cuarentaPlusChullas"
-                android:text="+2 points" />
+                android:text="+2" />
 
             <Button
                 android:id="@+id/caidaC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"
+                style="@style/scoreButton"
                 android:onClick="caidaChullas"
                 android:text="caida" />
 
             <Button
                 android:id="@+id/dealC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF4C3B"
+                style="@style/scoreButton"
+                android:background="@color/orange"
                 android:onClick="minusTwoChullas"
-                android:text="-2 points" />
+                android:text="-2" />
 
         </LinearLayout>
 
@@ -122,7 +83,7 @@ Chullas image borrowed from Visarts. Stock Hipster B n W Cool Haircut
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:layout_marginTop="8dp"
-            android:background="#0072bb"
+            android:background="@color/bright_blue"
 
             />
 
@@ -136,104 +97,50 @@ Chullas image borrowed from Visarts. Stock Hipster B n W Cool Haircut
 
             <ImageView
                 android:id="@+id/viejo"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:padding="4dp"
-                android:paddingTop="16dp"
-                android:scaleType="centerCrop"
+                style="@style/teamLogos"
                 android:src="@drawable/viejo" />
 
             <TextView
                 android:id="@+id/viejos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/viejo"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_horizontal"
-                android:paddingBottom="8dp"
-                android:paddingTop="8dp"
-                android:text="Viejos"
-                android:textColor="#FB131313"
-                android:textSize="12sp" />
+                style="@style/teamNames"
+                android:text="@string/teamTwo"
+                android:textColor="@color/charcoal"
+                android:textSize="@dimen/font_size" />
 
             <TextView
                 android:id="@+id/viejosScore"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_horizontal"
+                style="@style/scoreStyle"
                 android:onClick="viejosScore"
-                android:padding="8dp"
-                android:paddingBottom="12dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="32sp" />
+                android:text="0" />
 
             <Button
                 android:id="@+id/rondaV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"
+                style="@style/scoreButton"
                 android:onClick="cuarentaPlusViejos"
                 android:text="ronda" />
 
             <Button
                 android:id="@+id/limpiaV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"
+                style="@style/scoreButton"
                 android:onClick="cuarentaPlusViejos"
                 android:text="limpia" />
 
             <Button
                 android:id="@+id/dosV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"
+                style="@style/scoreButton"
                 android:onClick="cuarentaPlusViejos"
                 android:text="+2" />
 
             <Button
                 android:id="@+id/caidaV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"
+                style="@style/scoreButton"
                 android:onClick="caidaViejos"
                 android:text="caida" />
 
             <Button
                 android:id="@+id/dealV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF4C3B"
+                style="@style/scoreButton"
+                android:background="@color/orange"
                 android:onClick="minusTwoViejos"
                 android:text="-2" />
 
@@ -244,13 +151,10 @@ Chullas image borrowed from Visarts. Stock Hipster B n W Cool Haircut
 
     <Button
         android:id="@+id/reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:background="#C6C8CA"
+        style="@style/resetStyle"
         android:onClick="resetButton"
         android:text="reset" />
 
 </RelativeLayout>
+
+</ScrollView>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Cuarenta</string>
+    <string name="teamOne">Chullas</string>
+    <string name="teamTwo">Viejos</string>
+    <string name="chullasWin">Congratulations Chullas wins!</string>
+    <string name="viejosWin">Congratulations Viejos wins!</string>
+    <string name="beforeForty">Only way to reach 40 points is Caida</string>
 </resources>

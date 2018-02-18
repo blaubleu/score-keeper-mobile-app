@@ -64,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
      *  One method to rule them all
      *  All the possible ways to score +2 pts for team Chullas
      */
-    public void twoPointsAddedToChullas(View view){
+    public void cuarentaPlusChullas(View view){
         if (scoreChullas >= 38) {
-            caidaToast("Only way to reach 40 points is Caida");
+            caidaToast(getString(R.string.beforeForty));
             return;
         }
         scoreChullas = scoreChullas + 2;
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             displayChullas(scoreChullas);
 
             //alert goes here
-            winner("Congratulations Chullas wins!");
+            winner(getString(R.string.chullasWin));
         }
     }
 
@@ -111,9 +111,9 @@ public class MainActivity extends AppCompatActivity {
      *  One method to rule them all
      *  All the possible ways to score +2 pts for team Viejos
      */
-    public void twoPointsAddedToViejos(View view){
+    public void cuarentaPlusViejos(View view){
         if (scoreViejos >= 38) {
-            caidaToast("Only way to reach 40 points is Caida");
+            caidaToast(getString(R.string.beforeForty));
             return;
         }
         scoreViejos = scoreViejos + 2;
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
             displayViejos(scoreViejos);
 
             //alert goes here
-            winner("Congratulations Viejos wins!");
+            winner(getString(R.string.viejosWin));
         }
     }
 
