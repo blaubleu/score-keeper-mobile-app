@@ -5,20 +5,34 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    int scoreChullas = 0;
-    int scoreViejos = 0;
+    private int scoreChullas = 0;
+    private int scoreViejos = 0;
+    
+    //initialize text views per team
+    private TextView chullas, chullasScore;
+    private TextView viejos, viejosScore;
+
+    private Button reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        chullas = findViewById(R.id.chullas);
+        chullasScore = findViewById(R.id.chullasScore);
+        viejos = findViewById(R.id.viejos);
+        viejosScore = findViewById(R.id.viejosScore);
+        reset = findViewById(R.id.reset);
     }
 
     public void winner(String winnerMessage) {
@@ -38,15 +52,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     *  Toast method
+     *  Toast
      */
     public void caidaToast(String text) {
 
         Context context = getApplicationContext();
-
         int duration = Toast.LENGTH_SHORT;
-
         Toast toast = Toast.makeText(context, text, duration);
+        toast.setGravity(Gravity.CENTER_HORIZONTAL,40, 20);
         toast.show();
     }
 
@@ -157,5 +170,25 @@ public class MainActivity extends AppCompatActivity {
         scoreViejos = 0;
         displayChullas(scoreChullas);
         displayViejos(scoreViejos);
+    }
+
+    /**
+     * data persistence
+     * @param outState
+     */
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("chullasScore",scoreChullas);
+        outState.putInt("viejosScore",scoreViejos);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        scoreChullas = savedInstanceState.getInt("chullasScore");
+        scoreViejos = savedInstanceState.getInt("viejosScore");
     }
 }

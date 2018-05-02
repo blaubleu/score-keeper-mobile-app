@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 Viejos image borrowed from docponds.com the best pub in Stowe VT
 Chullas image borrowed from Visarts. Stock Hipster B n W Cool Haircut
 -->
@@ -11,150 +10,152 @@ Chullas image borrowed from Visarts. Stock Hipster B n W Cool Haircut
     android:orientation="vertical"
     android:padding="10dp">
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/chulla"
-                style="@style/teamLogos"
-                android:src="@drawable/chulla" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/chullas"
-                style="@style/teamNames"
-                android:text="@string/teamOne"
-                android:textColor="@color/charcoal"
-                android:textSize="@dimen/font_size" />
+                <ImageView
+                    android:id="@+id/chulla"
+                    style="@style/teamLogos"
+                    android:src="@drawable/chulla" />
 
-            <TextView
-                android:id="@+id/chullasScore"
-                style="@style/scoreStyle"
-                android:onClick="chullasScore"
-                android:text="0"  />
+                <TextView
+                    android:id="@+id/chullas"
+                    style="@style/teamNames"
+                    android:text="@string/teamOne"
+                    android:textColor="@color/charcoal"
+                    android:textSize="@dimen/font_size" />
 
-            <Button
-                android:id="@+id/rondaC"
-                style="@style/scoreButton"
-                android:onClick="cuarentaPlusChullas"
-                android:text="ronda" />
+                <TextView
+                    android:id="@+id/chullasScore"
+                    style="@style/scoreStyle"
+                    android:freezesText="true"
+                    android:onClick="chullasScore"
+                    android:text="0" />
 
-            <Button
-                android:id="@+id/limpiaC"
-                style="@style/scoreButton"
-                android:onClick="cuarentaPlusChullas"
-                android:text="limpia" />
+                <Button
+                    android:id="@+id/rondaC"
+                    style="@style/scoreButton"
+                    android:onClick="cuarentaPlusChullas"
+                    android:text="ronda" />
 
-            <Button
-                android:id="@+id/dosC"
-                style="@style/scoreButton"
-                android:onClick="cuarentaPlusChullas"
-                android:text="+2" />
+                <Button
+                    android:id="@+id/limpiaC"
+                    style="@style/scoreButton"
+                    android:onClick="cuarentaPlusChullas"
+                    android:text="limpia" />
 
-            <Button
-                android:id="@+id/caidaC"
-                style="@style/scoreButton"
-                android:onClick="caidaChullas"
-                android:text="caida" />
+                <Button
+                    android:id="@+id/dosC"
+                    style="@style/scoreButton"
+                    android:onClick="cuarentaPlusChullas"
+                    android:text="+2" />
 
-            <Button
-                android:id="@+id/dealC"
-                style="@style/scoreButton"
-                android:background="@color/orange"
-                android:onClick="minusTwoChullas"
-                android:text="-2" />
+                <Button
+                    android:id="@+id/caidaC"
+                    style="@style/scoreButton"
+                    android:onClick="caidaChullas"
+                    android:text="caida" />
+
+                <Button
+                    android:id="@+id/dealC"
+                    style="@style/scoreButton"
+                    android:background="@color/orange"
+                    android:onClick="minusTwoChullas"
+                    android:text="-2" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/bright_blue"
+
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/viejo"
+                    style="@style/teamLogos"
+                    android:src="@drawable/viejo" />
+
+                <TextView
+                    android:id="@+id/viejos"
+                    style="@style/teamNames"
+                    android:text="@string/teamTwo"
+                    android:textColor="@color/charcoal"
+                    android:textSize="@dimen/font_size" />
+
+                <TextView
+                    android:id="@+id/viejosScore"
+                    style="@style/scoreStyle"
+                    android:freezesText="true"
+                    android:onClick="viejosScore"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/rondaV"
+                    style="@style/scoreButton"
+                    android:onClick="cuarentaPlusViejos"
+                    android:text="ronda" />
+
+                <Button
+                    android:id="@+id/limpiaV"
+                    style="@style/scoreButton"
+                    android:onClick="cuarentaPlusViejos"
+                    android:text="limpia" />
+
+                <Button
+                    android:id="@+id/dosV"
+                    style="@style/scoreButton"
+                    android:onClick="cuarentaPlusViejos"
+                    android:text="+2" />
+
+                <Button
+                    android:id="@+id/caidaV"
+                    style="@style/scoreButton"
+                    android:onClick="caidaViejos"
+                    android:text="caida" />
+
+                <Button
+                    android:id="@+id/dealV"
+                    style="@style/scoreButton"
+                    android:background="@color/orange"
+                    android:onClick="minusTwoViejos"
+                    android:text="-2" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
-            android:background="@color/bright_blue"
+        <Button
+            android:id="@+id/reset"
+            style="@style/resetStyle"
+            android:onClick="resetButton"
+            android:text="reset" />
 
-            />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/viejo"
-                style="@style/teamLogos"
-                android:src="@drawable/viejo" />
-
-            <TextView
-                android:id="@+id/viejos"
-                style="@style/teamNames"
-                android:text="@string/teamTwo"
-                android:textColor="@color/charcoal"
-                android:textSize="@dimen/font_size" />
-
-            <TextView
-                android:id="@+id/viejosScore"
-                style="@style/scoreStyle"
-                android:onClick="viejosScore"
-                android:text="0" />
-
-            <Button
-                android:id="@+id/rondaV"
-                style="@style/scoreButton"
-                android:onClick="cuarentaPlusViejos"
-                android:text="ronda" />
-
-            <Button
-                android:id="@+id/limpiaV"
-                style="@style/scoreButton"
-                android:onClick="cuarentaPlusViejos"
-                android:text="limpia" />
-
-            <Button
-                android:id="@+id/dosV"
-                style="@style/scoreButton"
-                android:onClick="cuarentaPlusViejos"
-                android:text="+2" />
-
-            <Button
-                android:id="@+id/caidaV"
-                style="@style/scoreButton"
-                android:onClick="caidaViejos"
-                android:text="caida" />
-
-            <Button
-                android:id="@+id/dealV"
-                style="@style/scoreButton"
-                android:background="@color/orange"
-                android:onClick="minusTwoViejos"
-                android:text="-2" />
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/reset"
-        style="@style/resetStyle"
-        android:onClick="resetButton"
-        android:text="reset" />
-
-</RelativeLayout>
+    </RelativeLayout>
 
 </ScrollView>

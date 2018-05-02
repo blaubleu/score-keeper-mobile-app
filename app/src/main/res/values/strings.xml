@@ -4,5 +4,5 @@
     <string name="teamTwo">Viejos</string>
     <string name="chullasWin">Congratulations Chullas wins!</string>
     <string name="viejosWin">Congratulations Viejos wins!</string>
-    <string name="beforeForty">Only way to reach 40 points is Caida</string>
+    <string name="beforeForty">You can only score 2 points \n     by performing a Caida</string>
 </resources>
