@@ -16,9 +16,11 @@ public class MainActivity extends AppCompatActivity {
 
     private int scoreChullas = 0;
     private int scoreViejos = 0;
+    final int points = 2;
     
-    //initialize text views per team
+    //initialize text views + score buttons per team
     private TextView chullas, chullasScore;
+
     private TextView viejos, viejosScore;
 
     private Button reset;
@@ -28,10 +30,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // initialize widgets per team
         chullas = findViewById(R.id.chullas);
         chullasScore = findViewById(R.id.chullasScore);
+
         viejos = findViewById(R.id.viejos);
         viejosScore = findViewById(R.id.viejosScore);
+
         reset = findViewById(R.id.reset);
     }
 
@@ -46,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-
         alertDialog.show();
     }
 
@@ -66,36 +70,39 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Chullas section starts here
-     * -2 to opponent for bad dealing
+     *
+     * -2 for a hand badly dealt
      */
     public void minusTwoChullas(View view) {
-        scoreChullas = scoreChullas - 2;
+        scoreChullas = scoreChullas - points;
         displayChullas(scoreChullas);
     }
 
     /**
      *  One method to rule them all
-     *  All the possible ways to score +2 pts for team Chullas
+     *  All the possible ways to score +2 points for team Chullas
      */
     public void cuarentaPlusChullas(View view){
         if (scoreChullas >= 38) {
             caidaToast(getString(R.string.beforeForty));
             return;
         }
-        scoreChullas = scoreChullas + 2;
+        scoreChullas = scoreChullas + points;
         displayChullas(scoreChullas);
     }
 
     /**
      * 38 points won't allow anything but to use method twoToChullasCaida
+     * Original method implementation idea modified by @Causaelity R.S. - he taught me how to verify against a boolean variable
+     *  He also mentored me on implementing the AlertDialog message
      */
     public void caidaChullas(View view) {
         if (scoreChullas < 38) {
-            scoreChullas = scoreChullas + 2;
+            scoreChullas = scoreChullas + points;
             displayChullas(scoreChullas);
         }
         else if (scoreChullas == 38){
-            scoreChullas = scoreChullas + 2;
+            scoreChullas = scoreChullas + points;
             displayChullas(scoreChullas);
 
             //alert goes here
@@ -113,10 +120,10 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      *    Viejos section starts here
-     *    -2 to opponent for bad dealing
+     *    -2 for a hand badly dealt
      */
     public void minusTwoViejos(View v) {
-        scoreViejos = scoreViejos - 2;
+        scoreViejos = scoreViejos - points;
         displayViejos(scoreViejos);
     }
 
@@ -129,20 +136,22 @@ public class MainActivity extends AppCompatActivity {
             caidaToast(getString(R.string.beforeForty));
             return;
         }
-        scoreViejos = scoreViejos + 2;
+        scoreViejos = scoreViejos + points;
         displayViejos(scoreViejos);
     }
 
     /**
      * 38 points won't allow anything but to use method twoToChullasCaida
+     * Original method implementation idea modified by @Causaelity R.S. - he taught me how to verify against a boolean variable
+     * He also mentored me on implementing the AlertDialog message
      */
     public void caidaViejos(View view) {
         if (scoreViejos < 38) {
-            scoreViejos = scoreViejos + 2;
+            scoreViejos = scoreViejos + points;
             displayViejos(scoreViejos);
         }
         else if (scoreViejos == 38) {
-            scoreViejos = scoreViejos + 2;
+            scoreViejos = scoreViejos + points;
             displayViejos(scoreViejos);
 
             //alert goes here
@@ -160,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      *  Reset scores
+     *  @Causaelity suggested the implementation of this method as a private method
      */
     public void resetButton (View v) {
         reset();
@@ -173,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * data persistence
+     * data persistence test to keep score information
      * @param outState
      */
     @Override
