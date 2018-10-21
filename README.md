@@ -1,9 +1,15 @@
-# Cuarenta_v2
+# Score Keeper
+
+<h3>Cuarenta! (40)</h3>
+First project in Java.
+A score keeper for a card game played in Ecuador<hr>
+<strong>Interfaces and Objects used:</strong>
+<ul>
+<li>AlertDialog</li>
+<li>onSaveInstanceState</li>
+<li>onRestoreInstanceState</li>
+</ul>
+<p>Preview:
+
 ![preview](/Images/Cuarenta.jpg)
 ![preview](/Images/AlertDialog.png)
-
-First project from scratch.
-
-Tons of help from Causaelity. 
-Lots of feedback from him and mentors. 
-Currently on its second release, but will still revisit in the future. 
